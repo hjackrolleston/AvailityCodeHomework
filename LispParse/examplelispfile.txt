@@ -1,0 +1,4 @@
+(defun person-at (loc pers per-locs)
+       (labels ((at-loc-p (pers)
+                 (eq (cadr (assoc pers per-locs)) loc)))
+         (remove-if-not #'at-loc-p pers)))
